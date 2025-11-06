@@ -2,20 +2,90 @@ import 'package:todo_app_cifo/models/recipe_model.dart';
 
 List<RecipeModel> recipesUserMock = [
   RecipeModel(
-    desc: "Ensalada de primavera con espárragos",
+    name: "Ensalada de primavera con espárragos",
+    ingredients: [
+      "150 g de espárragos trigueros",
+      "1 taza de brotes verdes",
+      "100 g de fresas",
+      "50 g de queso feta",
+      "2 cucharadas de nueces picadas",
+      "Vinagreta de limón"
+    ],
     season: RecipeSeason.spring,
+    preparationTime: "20 min",
+    difficulty: RecipeDifficulty.easy,
+    steps: [
+      "Lava y corta los espárragos en trozos pequeños.",
+      "Sella los espárragos en una sartén con un poco de aceite durante 3 minutos.",
+      "Mezcla los brotes verdes con las fresas laminadas y el queso feta desmenuzado.",
+      "Añade los espárragos templados y las nueces picadas.",
+      "Aliña con la vinagreta de limón justo antes de servir."
+    ],
   ),
   RecipeModel(
-    desc: "Gazpacho refrescante de verano",
+    name: "Gazpacho refrescante de verano",
+    ingredients: [
+      "6 tomates maduros",
+      "1 pepino",
+      "1 pimiento verde",
+      "1 diente de ajo",
+      "3 cucharadas de aceite de oliva virgen extra",
+      "2 cucharadas de vinagre de Jerez",
+      "Sal al gusto"
+    ],
     season: RecipeSeason.summer,
+    preparationTime: "15 min",
+    difficulty: RecipeDifficulty.easy,
+    steps: [
+      "Lava y trocea los tomates, el pepino y el pimiento.",
+      "Introduce las verduras en la batidora junto con el ajo, el aceite y el vinagre.",
+      "Tritura hasta conseguir una textura fina y homogénea.",
+      "Ajusta de sal y deja reposar en la nevera al menos 1 hora.",
+      "Sirve bien frío con un chorrito extra de aceite de oliva."
+    ],
     isCooked: true,
   ),
   RecipeModel(
-    desc: "Crema de calabaza otoñal",
+    name: "Crema de calabaza otoñal",
+    ingredients: [
+      "500 g de calabaza",
+      "1 puerro",
+      "1 zanahoria",
+      "500 ml de caldo de verduras",
+      "50 ml de nata líquida",
+      "Aceite de oliva",
+      "Sal y pimienta"
+    ],
     season: RecipeSeason.autumn,
+    preparationTime: "40 min",
+    difficulty: RecipeDifficulty.medium,
+    steps: [
+      "Pocha el puerro y la zanahoria picados con un chorrito de aceite.",
+      "Añade la calabaza troceada y rehoga durante 5 minutos.",
+      "Cubre con el caldo y cocina a fuego medio 20 minutos.",
+      "Tritura la mezcla hasta obtener una crema fina.",
+      "Agrega la nata, ajusta de sal y pimienta, y sirve caliente."
+    ],
   ),
   RecipeModel(
-    desc: "Chocolate caliente especiado de invierno",
+    name: "Chocolate caliente especiado de invierno",
+    ingredients: [
+      "1 litro de leche entera",
+      "200 g de chocolate negro 70%",
+      "1 rama de canela",
+      "2 clavos de olor",
+      "1 pizca de nuez moscada",
+      "2 cucharadas de azúcar moreno"
+    ],
     season: RecipeSeason.winter,
+    preparationTime: "15 min",
+    difficulty: RecipeDifficulty.easy,
+    steps: [
+      "Calienta la leche con la canela, los clavos y la nuez moscada.",
+      "Cuando empiece a hervir, retira las especias.",
+      "Añade el chocolate troceado y el azúcar, removiendo hasta que se derrita.",
+      "Cuece a fuego lento 5 minutos para espesar.",
+      "Sirve el chocolate caliente acompañado de tu topping favorito."
+    ],
   ),
 ];

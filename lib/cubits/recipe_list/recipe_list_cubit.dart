@@ -10,12 +10,7 @@ class RecipeListCubit extends Cubit<RecipeListState> {
   void toggleRecipe(String id) {
     final List<RecipeModel> updatedRecipes = state.recipes.map((recipe) {
       if (recipe.id == id) {
-        return RecipeModel(
-          id: recipe.id,
-          desc: recipe.desc,
-          season: recipe.season,
-          isCooked: !recipe.isCooked,
-        );
+        return recipe.copyWith(isCooked: !recipe.isCooked);
       }
       return recipe;
     }).toList();

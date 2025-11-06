@@ -30,11 +30,7 @@ class RecipesPage extends StatelessWidget {
                 itemCount: state.filteredRecipes.length,
                 itemBuilder: (context, index) {
                   final recipe = state.filteredRecipes[index];
-                  return RecipeItemWidget(
-                    desc: recipe.desc,
-                    isCooked: recipe.isCooked,
-                    id: recipe.id,
-                  );
+                  return RecipeItemWidget(recipe: recipe);
                 },
               );
             },
