@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_app_cifo/cubits/recipe_list/recipe_list_cubit.dart';
-import 'package:todo_app_cifo/models/recipe_model.dart';
-import 'package:todo_app_cifo/ui/pages/recipe_detail_page.dart';
+import 'package:go_router/go_router.dart';
+import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_cubit.dart';
+import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
+import 'package:todo_app_cifo/router/app_router.dart';
 
 class RecipeItemWidget extends StatelessWidget {
   final RecipeModel recipe;
 
-  const RecipeItemWidget({
-    super.key,
-    required this.recipe,
-  });
+  const RecipeItemWidget({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (_) => RecipeDetailPage(recipe: recipe),
-          ),
+        context.pushNamed(
+          AppRouter.recipe.name,
+          extra: recipe,
         );
       },
       title: Text(recipe.name),

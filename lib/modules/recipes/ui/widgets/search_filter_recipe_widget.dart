@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_app_cifo/cubits/recipe_list/recipe_list_cubit.dart';
-import 'package:todo_app_cifo/cubits/recipe_list/recipe_list_state.dart';
-import 'package:todo_app_cifo/ui/widgets/filter_button.dart';
+import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_cubit.dart';
+import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_state.dart';
+import 'package:todo_app_cifo/modules/recipes/ui/widgets/filter_button.dart';
 
 class SearchFilterRecipeWidget extends StatelessWidget {
   const SearchFilterRecipeWidget({super.key});

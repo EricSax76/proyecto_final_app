@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_app_cifo/cubits/recipe_list/recipe_list_state.dart';
-import 'package:todo_app_cifo/models/recipe_model.dart';
+import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_state.dart';
+import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
 
 class RecipeListCubit extends Cubit<RecipeListState> {
   RecipeListCubit() : super(RecipeListState.initial()) {
@@ -29,10 +29,13 @@ class RecipeListCubit extends Cubit<RecipeListState> {
     final List<RecipeModel> updatedRecipes = recipes ?? state.recipes;
     final RecipeFilter updatedFilter = filter ?? state.filter;
 
-    final int pendingRecipeCount =
-        updatedRecipes.where((element) => !element.isCooked).length;
-    final List<RecipeModel> filteredRecipes =
-        _filterRecipes(updatedRecipes, updatedFilter);
+    final int pendingRecipeCount = updatedRecipes
+        .where((element) => !element.isCooked)
+        .length;
+    final List<RecipeModel> filteredRecipes = _filterRecipes(
+      updatedRecipes,
+      updatedFilter,
+    );
 
     emit(
       state.copyWith(

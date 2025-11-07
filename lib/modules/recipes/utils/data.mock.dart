@@ -1,4 +1,4 @@
-import 'package:todo_app_cifo/models/recipe_model.dart';
+import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
 
 List<RecipeModel> recipesUserMock = [
   RecipeModel(
@@ -9,7 +9,7 @@ List<RecipeModel> recipesUserMock = [
       "100 g de fresas",
       "50 g de queso feta",
       "2 cucharadas de nueces picadas",
-      "Vinagreta de limón"
+      "Vinagreta de limón",
     ],
     season: RecipeSeason.spring,
     preparationTime: "20 min",
@@ -19,7 +19,7 @@ List<RecipeModel> recipesUserMock = [
       "Sella los espárragos en una sartén con un poco de aceite durante 3 minutos.",
       "Mezcla los brotes verdes con las fresas laminadas y el queso feta desmenuzado.",
       "Añade los espárragos templados y las nueces picadas.",
-      "Aliña con la vinagreta de limón justo antes de servir."
+      "Aliña con la vinagreta de limón justo antes de servir.",
     ],
   ),
   RecipeModel(
@@ -31,7 +31,7 @@ List<RecipeModel> recipesUserMock = [
       "1 diente de ajo",
       "3 cucharadas de aceite de oliva virgen extra",
       "2 cucharadas de vinagre de Jerez",
-      "Sal al gusto"
+      "Sal al gusto",
     ],
     season: RecipeSeason.summer,
     preparationTime: "15 min",
@@ -41,7 +41,7 @@ List<RecipeModel> recipesUserMock = [
       "Introduce las verduras en la batidora junto con el ajo, el aceite y el vinagre.",
       "Tritura hasta conseguir una textura fina y homogénea.",
       "Ajusta de sal y deja reposar en la nevera al menos 1 hora.",
-      "Sirve bien frío con un chorrito extra de aceite de oliva."
+      "Sirve bien frío con un chorrito extra de aceite de oliva.",
     ],
     isCooked: true,
   ),
@@ -54,7 +54,7 @@ List<RecipeModel> recipesUserMock = [
       "500 ml de caldo de verduras",
       "50 ml de nata líquida",
       "Aceite de oliva",
-      "Sal y pimienta"
+      "Sal y pimienta",
     ],
     season: RecipeSeason.autumn,
     preparationTime: "40 min",
@@ -64,7 +64,7 @@ List<RecipeModel> recipesUserMock = [
       "Añade la calabaza troceada y rehoga durante 5 minutos.",
       "Cubre con el caldo y cocina a fuego medio 20 minutos.",
       "Tritura la mezcla hasta obtener una crema fina.",
-      "Agrega la nata, ajusta de sal y pimienta, y sirve caliente."
+      "Agrega la nata, ajusta de sal y pimienta, y sirve caliente.",
     ],
   ),
   RecipeModel(
@@ -75,7 +75,7 @@ List<RecipeModel> recipesUserMock = [
       "1 rama de canela",
       "2 clavos de olor",
       "1 pizca de nuez moscada",
-      "2 cucharadas de azúcar moreno"
+      "2 cucharadas de azúcar moreno",
     ],
     season: RecipeSeason.winter,
     preparationTime: "15 min",
@@ -85,7 +85,7 @@ List<RecipeModel> recipesUserMock = [
       "Cuando empiece a hervir, retira las especias.",
       "Añade el chocolate troceado y el azúcar, removiendo hasta que se derrita.",
       "Cuece a fuego lento 5 minutos para espesar.",
-      "Sirve el chocolate caliente acompañado de tu topping favorito."
+      "Sirve el chocolate caliente acompañado de tu topping favorito.",
     ],
   ),
 ];

@@ -1,5 +1,5 @@
-import 'package:todo_app_cifo/models/recipe_model.dart';
-import 'package:todo_app_cifo/utils/data.mock.dart';
+import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
+import 'package:todo_app_cifo/modules/recipes/utils/data.mock.dart';
 
 enum RecipeFilter { all, spring, summer, autumn, winter }
 

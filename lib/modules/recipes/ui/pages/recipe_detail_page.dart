@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app_cifo/models/recipe_model.dart';
+import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
 
 class RecipeDetailPage extends StatelessWidget {
   final RecipeModel recipe;
@@ -9,9 +9,7 @@ class RecipeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(recipe.name),
-      ),
+      appBar: AppBar(title: Text(recipe.name)),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: ListView(
@@ -52,27 +50,22 @@ class RecipeDetailPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            Text(
-              "Pasos",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
+            Text("Pasos", style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 8),
-            ...recipe.steps.asMap().entries.map(
-              (entry) {
-                final index = entry.key + 1;
-                final step = entry.value;
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("$index. "),
-                      Expanded(child: Text(step)),
-                    ],
-                  ),
-                );
-              },
-            ),
+            ...recipe.steps.asMap().entries.map((entry) {
+              final index = entry.key + 1;
+              final step = entry.value;
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("$index. "),
+                    Expanded(child: Text(step)),
+                  ],
+                ),
+              );
+            }),
           ],
         ),
       ),
@@ -128,12 +121,7 @@ class _InfoRow extends StatelessWidget {
           style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(width: 8),
-        Expanded(
-          child: Text(
-            value,
-            style: textTheme.bodyMedium,
-          ),
-        ),
+        Expanded(child: Text(value, style: textTheme.bodyMedium)),
       ],
     );
   }
