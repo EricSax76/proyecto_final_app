@@ -14,6 +14,33 @@ class RecipeDetailPage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: ListView(
           children: [
+            if (recipe.imageUrl != null && recipe.imageUrl!.isNotEmpty)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.network(
+                  recipe.imageUrl!,
+                  height: 220,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => Container(
+                    height: 220,
+                    color: Colors.grey.shade200,
+                    alignment: Alignment.center,
+                    child: const Icon(Icons.image_not_supported, size: 40),
+                  ),
+                ),
+              )
+            else
+              Container(
+                height: 220,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.grey.shade200,
+                ),
+                alignment: Alignment.center,
+                child: const Icon(Icons.image, size: 40, color: Colors.grey),
+              ),
+            const SizedBox(height: 16),
             _InfoRow(
               icon: Icons.schedule,
               label: "Tiempo de preparación",

@@ -3,6 +3,8 @@ import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
 List<RecipeModel> recipesUserMock = [
   RecipeModel(
     name: "Ensalada de primavera con espárragos",
+    imageUrl:
+        "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80",
     ingredients: [
       "150 g de espárragos trigueros",
       "1 taza de brotes verdes",
@@ -24,6 +26,8 @@ List<RecipeModel> recipesUserMock = [
   ),
   RecipeModel(
     name: "Gazpacho refrescante de verano",
+    imageUrl:
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
     ingredients: [
       "6 tomates maduros",
       "1 pepino",
@@ -47,6 +51,8 @@ List<RecipeModel> recipesUserMock = [
   ),
   RecipeModel(
     name: "Crema de calabaza otoñal",
+    imageUrl:
+        "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80",
     ingredients: [
       "500 g de calabaza",
       "1 puerro",
@@ -69,6 +75,8 @@ List<RecipeModel> recipesUserMock = [
   ),
   RecipeModel(
     name: "Chocolate caliente especiado de invierno",
+    imageUrl:
+        "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=1200&q=80",
     ingredients: [
       "1 litro de leche entera",
       "200 g de chocolate negro 70%",

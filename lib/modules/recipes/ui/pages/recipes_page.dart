@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_cubit.dart';
 import 'package:todo_app_cifo/modules/recipes/models/cubits/recipe_list/recipe_list_state.dart';
+import 'package:todo_app_cifo/modules/recipes/ui/widgets/create_recipe_widget.dart';
 import 'package:todo_app_cifo/modules/recipes/ui/widgets/recipe_header_widget.dart';
 import 'package:todo_app_cifo/modules/recipes/ui/widgets/recipe_item_widget.dart';
 import 'package:todo_app_cifo/modules/recipes/ui/widgets/search_filter_recipe_widget.dart';
@@ -12,6 +13,7 @@ class RecipesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: const CreateRecipeWidget(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),

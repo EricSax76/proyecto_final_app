@@ -18,58 +18,22 @@ class SearchFilterRecipeWidget extends StatelessWidget {
             filled: true,
             prefixIcon: Icon(Icons.search),
           ),
-          onChanged: (value) {
-            debugPrint('onChanged');
-          },
-          onSubmitted: (value) {
-            debugPrint('onSubmitted');
-          },
+          onChanged: (value) =>
+              context.read<RecipeListCubit>().searchRecipes(value),
+          onSubmitted: (value) =>
+              context.read<RecipeListCubit>().searchRecipes(value),
         ),
         SizedBox(height: 10),
-        BlocBuilder<RecipeListCubit, RecipeListState>(
-          builder: (context, state) {
-            return Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              spacing: 6,
-              children: [
-                FilterButton(
-                  text: "Todas",
-                  isSelected: state.filter == RecipeFilter.all,
-                  onPressed: () => context.read<RecipeListCubit>().changeFilter(
-                    RecipeFilter.all,
-                  ),
-                ),
-                FilterButton(
-                  text: "Primavera",
-                  isSelected: state.filter == RecipeFilter.spring,
-                  onPressed: () => context.read<RecipeListCubit>().changeFilter(
-                    RecipeFilter.spring,
-                  ),
-                ),
-                FilterButton(
-                  text: "Verano",
-                  isSelected: state.filter == RecipeFilter.summer,
-                  onPressed: () => context.read<RecipeListCubit>().changeFilter(
-                    RecipeFilter.summer,
-                  ),
-                ),
-                FilterButton(
-                  text: "Otoño",
-                  isSelected: state.filter == RecipeFilter.autumn,
-                  onPressed: () => context.read<RecipeListCubit>().changeFilter(
-                    RecipeFilter.autumn,
-                  ),
-                ),
-                FilterButton(
-                  text: "Invierno",
-                  isSelected: state.filter == RecipeFilter.winter,
-                  onPressed: () => context.read<RecipeListCubit>().changeFilter(
-                    RecipeFilter.winter,
-                  ),
-                ),
-              ],
-            );
-          },
+        Wrap(
+          alignment: WrapAlignment.spaceBetween,
+          spacing: 6,
+          children: const [
+            FilterButton(filter: RecipeFilter.all),
+            FilterButton(filter: RecipeFilter.spring),
+            FilterButton(filter: RecipeFilter.summer),
+            FilterButton(filter: RecipeFilter.autumn),
+            FilterButton(filter: RecipeFilter.winter),
+          ],
         ),
       ],
     );

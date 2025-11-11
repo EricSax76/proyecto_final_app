@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:todo_app_cifo/modules/recipes/models/recipe_model.dart';
+import 'package:todo_app_cifo/modules/recipes/ui/pages/create_recipe_page.dart';
 import 'package:todo_app_cifo/modules/recipes/ui/pages/recipe_detail_page.dart';
 import 'package:todo_app_cifo/modules/recipes/ui/pages/recipes_page.dart';
 
-enum AppRouter { home, recipe }
+enum AppRouter { home, recipe, createRecipe }
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -27,6 +28,11 @@ final GoRouter appRouter = GoRouter(
         }
         return RecipeDetailPage(recipe: recipe);
       },
+    ),
+    GoRoute(
+      path: '/create_recipe',
+      name: AppRouter.createRecipe.name,
+      builder: (context, state) => const CreateRecipePage(),
     ),
   ],
 );

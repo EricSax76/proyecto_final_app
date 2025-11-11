@@ -15,6 +15,7 @@ class RecipeModel {
   final List<String> steps;
   final bool isCooked;
   final RecipeSeason season;
+  final String? imageUrl;
 
   RecipeModel({
     String? id,
@@ -25,6 +26,7 @@ class RecipeModel {
     required this.difficulty,
     required this.steps,
     this.isCooked = false,
+    this.imageUrl,
   }) : id = id ?? uuid.v4();
 
   RecipeModel copyWith({
@@ -36,6 +38,7 @@ class RecipeModel {
     List<String>? steps,
     bool? isCooked,
     RecipeSeason? season,
+    String? imageUrl,
   }) {
     return RecipeModel(
       id: id ?? this.id,
@@ -46,6 +49,7 @@ class RecipeModel {
       difficulty: difficulty ?? this.difficulty,
       steps: steps ?? List<String>.from(this.steps),
       isCooked: isCooked ?? this.isCooked,
+      imageUrl: imageUrl ?? this.imageUrl,
     );
   }
 }
